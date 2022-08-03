@@ -30,6 +30,8 @@ jobs:
       run: |
         mkdir -p database
         touch database/database.sqlite
+    - name: Install Laravel Vite
+      run: npm install --production
     - name: Menjalankan Laravel Vite
       run: npm run build
     - name: Menjalankan Laravel Serve
