@@ -31,9 +31,9 @@ jobs:
         mkdir -p database
         touch database/database.sqlite
     - name: Install Laravel Vite
-      run: npm install --production
+      run: npm install
     - name: Menjalankan Laravel Vite
-      run: yarn run build
+      run: npm run build
     - name: Menjalankan Laravel Serve
       run: php artisan serve
     - name: Execute tests (Unit and Feature tests) via PHPUnit
