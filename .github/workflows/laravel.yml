@@ -34,8 +34,6 @@ jobs:
       run: npm install
     - name: Menjalankan Laravel Vite
       run: npm run build
-    - name: Menjalankan Laravel Serve
-      run: php artisan serve
     - name: Execute tests (Unit and Feature tests) via PHPUnit
       env:
         DB_CONNECTION: sqlite
