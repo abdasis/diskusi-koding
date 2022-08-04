@@ -13,9 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', \App\Http\Livewire\Client\Beranda::class)->name('beranda');
 
 Route::middleware([
     'auth:sanctum',

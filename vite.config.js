@@ -11,7 +11,7 @@ export default defineConfig({
             input: [
                 'resources/js/app.js',
             ],
-            refresh: ['resources/views/**'],
+            refresh: ['resources/views/**', 'public/css/style.css'],
         }),
 
         livewire({  // <-- add livewire plugin
