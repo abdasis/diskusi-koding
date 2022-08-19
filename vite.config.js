@@ -1,24 +1,17 @@
-import {defineConfig} from 'vite';
+import { defineConfig } from 'vite';
 import laravel from 'laravel-vite-plugin';
-
-import livewire from '@defstudio/vite-livewire-plugin'; // <-- import
+import react from '@vitejs/plugin-react';
 
 export default defineConfig({
-    //...
-
     plugins: [
         laravel({
-            input: [
-                'resources/js/app.js',
-            ],
-            refresh: ['resources/views/**', 'public/css/style.css'],
+            input: 'resources/js/app.jsx',
+            ssr: 'resources/js/ssr.jsx',
+            refresh: true,
         }),
-
-        livewire({  // <-- add livewire plugin
-            refresh: [
-                'resources/css/app.css',
-                'resources/views/**'
-            ],  // <-- will refresh css (tailwind ) as well
-        }),
+        react(),
     ],
+    ssr: {
+        noExternal: ['@inertiajs/server'],
+    },
 });
