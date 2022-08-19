@@ -1,0 +1,10 @@
+.single-post-title{
+    font-size: 34px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.post-body p{
+    font-size: 16px;
+    line-height: 22px;
+}

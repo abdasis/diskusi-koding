@@ -1,12 +1,16 @@
 import './bootstrap';
 import '../css/app.css';
+import '../sass/app.scss'
 
 import React from 'react';
 import { render } from 'react-dom';
 import { createInertiaApp } from '@inertiajs/inertia-react';
 import { InertiaProgress } from '@inertiajs/progress';
 import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
-
+import NProgress from 'nprogress'
+import { Inertia } from '@inertiajs/inertia'
+Inertia.on('start', () => NProgress.start())
+Inertia.on('finish', () => NProgress.done())
 const appName = window.document.getElementsByTagName('title')[0]?.innerText || 'Laravel';
 
 createInertiaApp({
@@ -17,4 +21,3 @@ createInertiaApp({
     },
 });
 
-InertiaProgress.init({ color: '#4B5563' });

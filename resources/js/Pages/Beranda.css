@@ -1,0 +1,17 @@
+.welcome{
+    min-height: 60vh;
+    background: #0078AA;
+}
+
+.box-content{
+    min-height: 60vh;
+}
+
+.widget-title{
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.btn-orange{
+    background: #F2DF3A;
+}

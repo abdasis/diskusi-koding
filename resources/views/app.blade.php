@@ -6,9 +6,17 @@
 
         <title inertia>{{ config('app.name', 'Laravel') }}</title>
 
-        <!-- Fonts -->
-        <link rel="stylesheet" href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css" />
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+            body{
+                background: #F8FAFC !important;
+            }
 
+            *{
+                font-family: 'Inter', sans-serif;
+            }
+        </style>
         <!-- Scripts -->
         @routes
         @viteReactRefresh
